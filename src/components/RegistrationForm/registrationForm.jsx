@@ -1,24 +1,45 @@
 import React from "react";
+import { TextField, Button, Switch, FormControlLabel } from "@material-ui/core";
 
 function RegistrationForm() {
   return (
     <form>
-      <label> Nome </label>
-      <input type="text" placeholder="Nome"></input>
+      <TextField
+        id="name"
+        variant="outlined"
+        label="Nome"
+        margin="normal"
+        fullWidth
+      />
+      <TextField
+        id="last-name"
+        variant="outlined"
+        label="Sobrenome"
+        margin="normal"
+        fullWidth
+      />
+      <TextField
+        id="CPF"
+        variant="outlined"
+        placeholder="000.000.000-00"
+        label="CPF"
+        margin="normal"
+        fullWidth
+      />
 
-      <label> Sobrenome </label>
-      <input type="text" placeholder="Sobrenome"></input>
+      <FormControlLabel
+        label="Promoções"
+        control={<Switch name="sales" defaultChecked color="primary" />}
+      />
 
-      <label> CPF </label>
-      <input type="text" placeholder="000.000.000-10"></input>
+      <FormControlLabel
+        label="Novidades"
+        control={<Switch name="newsletter" defaultChecked color="primary" />}
+      />
 
-      <label> Promoções </label>
-      <input type="checkbox"></input>
-
-      <label> Novidades </label>
-      <input type="checkbox"></input>
-
-      <button type="submit"> Cadastrar</button>
+      <Button type="submit" variant="contained" color="primary">
+        Cadastrar
+      </Button>
     </form>
   );
 }
