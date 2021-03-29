@@ -1,10 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import { TextField, Button, Switch, FormControlLabel } from "@material-ui/core";
 
 function RegistrationForm() {
+  const [name, setName] = useState("");
+  const [lastName, setLastName] = useState("");
+
   return (
-    <form>
+    <form
+      onSubmit={(event) => {
+        event.preventDefault();
+        console.log(name);
+        console.log(lastName);
+      }}
+    >
       <TextField
+        value={name}
+        onChange={(event) => {
+          let timeName = event.target.value;
+          if (timeName.length >= 3) {
+            timeName = timeName.substr(0, 3);
+          }
+          setName(timeName);
+        }}
         id="name"
         variant="outlined"
         label="Nome"
@@ -12,6 +29,10 @@ function RegistrationForm() {
         fullWidth
       />
       <TextField
+        value={lastName}
+        onChange={(event) => {
+          setLastName(event.target.value);
+        }}
         id="last-name"
         variant="outlined"
         label="Sobrenome"

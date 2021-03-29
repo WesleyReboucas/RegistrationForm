@@ -1,6 +1,6 @@
 import { Container, Typography } from "@material-ui/core";
 import React from "react";
-import RegistrationForm from "./components/RegistrationForm/registrationForm";
+import RegistrationForm from "./components/RegistrationForm/RegistrationForm";
 
 import "fontsource-roboto";
 
