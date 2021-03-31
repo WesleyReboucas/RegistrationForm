@@ -1,7 +1,8 @@
-import { Step, StepLabel, Stepper, Typography } from "@material-ui/core";
+import { Step, StepLabel, Stepper } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import DeliveryData from "./DeliveryData";
 import PersonalData from "./PersonalData";
+import RegistrationCompleted from "./RegistrationCompleted";
 import UserData from "./UserData";
 
 function RegistrationForm({ whenSending }) {
@@ -18,7 +19,7 @@ function RegistrationForm({ whenSending }) {
     <UserData whenSending={handleGetData} />,
     <PersonalData whenSending={handleGetData} />,
     <DeliveryData whenSending={handleGetData} />,
-    <Typography> Cadastro realizado com sucesso! </Typography>,
+    <RegistrationCompleted />,
   ];
 
   function handleGetData(data) {
