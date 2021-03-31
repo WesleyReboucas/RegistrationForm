@@ -1,9 +1,17 @@
 function validateCPF(cpf) {
   if (cpf.length === 11) {
-    let validateFirstDigit = 0;
-    let validateSecondDigit = 0;
+    // ------------------------------------ VALIDATE REPEATED NUMBERS
 
-    // ------------------------------------ VALIDATE 01
+    let cpfArray = Array.from(cpf);
+    const filtered = cpfArray.filter((element, position, arr) => {
+      return arr.indexOf(element) == position;
+    });
+    if (filtered.length === 1) {
+      return { valid: false, text: "O CPF está incorreto." };
+    }
+
+    // ------------------------------------ VALIDATE 1° DIGIT
+    let validateFirstDigit = 0;
     for (let n = 0; n < 9; n++) {
       const element = cpf[n];
       let aux = 10;
@@ -13,7 +21,8 @@ function validateCPF(cpf) {
     validateFirstDigit = (validateFirstDigit * 10) % 11;
     validateFirstDigit = validateFirstDigit === 10 ? 0 : validateFirstDigit;
 
-    // ------------------------------------ VALIDATE 02
+    // ------------------------------------ VALIDATE 2° DIGIT
+    let validateSecondDigit = 0;
     for (let n = 0; n < 10; n++) {
       const element = cpf[n];
       let aux = 11;
