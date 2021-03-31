@@ -1,6 +1,8 @@
-import { Container, Typography } from "@material-ui/core";
 import React from "react";
+import { Container, Typography } from "@material-ui/core";
+
 import RegistrationForm from "./components/RegistrationForm/RegistrationForm";
+import { validateCPF, validatePassword, validateName } from "./models/registration";
 
 import "fontsource-roboto";
 
@@ -12,7 +14,7 @@ function App() {
       </Typography>
       <RegistrationForm
         whenSending={whenSendingForm}
-        validateCPF={validateCPF}
+        validate={{ cpf: validateCPF, password: validatePassword, name: validateName }}
       />
     </Container>
   );
@@ -20,14 +22,6 @@ function App() {
 
 function whenSendingForm(data) {
   console.log(data);
-}
-
-function validateCPF(cpf) {
-  if (cpf.length !== 11) {
-    return { valid: false, text: "O CPF deve conter 11 dígitos" };
-  } else {
-    return { valid: true, text: "" };
-  }
 }
 
 export default App;
