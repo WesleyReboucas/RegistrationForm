@@ -4,7 +4,7 @@ import DeliveryData from "./DeliveryData";
 import PersonalData from "./PersonalData";
 import UserData from "./UserData";
 
-function RegistrationForm({ whenSending, validate }) {
+function RegistrationForm({ whenSending }) {
   const [currentStep, setCurrentStep] = useState(0);
   const [getData, setGetData] = useState({});
 
@@ -15,9 +15,9 @@ function RegistrationForm({ whenSending, validate }) {
   });
 
   const form = [
-    <UserData whenSending={handleGetData} validate={validate} />,
-    <PersonalData whenSending={handleGetData} validate={validate} />,
-    <DeliveryData whenSending={handleGetData} validate={validate} />,
+    <UserData whenSending={handleGetData} />,
+    <PersonalData whenSending={handleGetData} />,
+    <DeliveryData whenSending={handleGetData} />,
     <Typography> Cadastro realizado com sucesso! </Typography>,
   ];
 
