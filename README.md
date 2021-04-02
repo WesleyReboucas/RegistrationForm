@@ -38,7 +38,16 @@ Assuntos abordados:
 ## Layout
 
 <div style="display: flex; flex-direction: 'row'; align-items: 'center';">
-	<img src="https://user-images.githubusercontent.com/28845397/112648473-54f35000-8e28-11eb-9464-aeecc0927257.png" width="950px">	
+	<img src="./public/.github/form-02.png" width="450px">	
+</div>
+<div style="display: flex; flex-direction: 'row'; align-items: 'center';">
+	<img src="./public/.github/form-03.png" width="450px">	
+</div>
+<div style="display: flex; flex-direction: 'row'; align-items: 'center';">
+	<img src="./public/.github/form-04.png" width="450px">	
+</div>
+<div style="display: flex; flex-direction: 'row'; align-items: 'center';">
+	<img src="./public/.github/form-05.png" width="450px">	
 </div>
 
 ## Tecnologias
