@@ -3,9 +3,9 @@ import React from "react";
 import { Typography } from "@material-ui/core";
 import Lottie from "react-lottie";
 
-import complete from "./complete.json";
+import complete from "./style/complete.json";
 
-function RegistrationCompleted(params) {
+function RegistrationCompleted() {
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -19,7 +19,9 @@ function RegistrationCompleted(params) {
     <>
       <Lottie options={defaultOptions} height={400} width={400} />
       {/* animationData by Pavlo Monakhov */}
-      <Typography variant="h6" align="center"> Cadastro realizado com sucesso! </Typography>
+      <Typography variant="h6" align="center">
+        Cadastro realizado com sucesso!
+      </Typography>
     </>
   );
 }

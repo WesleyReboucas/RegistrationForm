@@ -19,9 +19,10 @@ function DeliveryData({ whenSending }) {
         id="cep"
         label="CEP"
         placeholder="00000-000"
-        type="number"
+        type="text"
         variant="outlined"
         margin="normal"
+        required
         value={cep}
         onChange={(event) => {
           setCep(event.target.value);
@@ -33,6 +34,7 @@ function DeliveryData({ whenSending }) {
         type="text"
         variant="outlined"
         margin="normal"
+        required
         fullWidth
         value={address}
         onChange={(event) => {
@@ -42,9 +44,10 @@ function DeliveryData({ whenSending }) {
       <TextField
         id="number"
         label="Número"
-        type="number"
+        type="text"
         variant="outlined"
         margin="normal"
+        required
         value={number}
         onChange={(event) => {
           setNumber(event.target.value);
@@ -56,6 +59,7 @@ function DeliveryData({ whenSending }) {
         type="text"
         variant="outlined"
         margin="normal"
+        required
         value={state}
         onChange={(event) => {
           setState(event.target.value);
@@ -67,6 +71,7 @@ function DeliveryData({ whenSending }) {
         type="text"
         variant="outlined"
         margin="normal"
+        required
         value={city}
         onChange={(event) => {
           setCity(event.target.value);
