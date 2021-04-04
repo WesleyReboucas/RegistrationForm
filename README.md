@@ -13,6 +13,7 @@
   <a href="#projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#instalação">Instalação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#bookmark_tabs-certificados">Certificados</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#page_with_curl-licencia">Licencia</a>
 </p>
@@ -51,6 +52,27 @@ Assuntos abordados:
 - [Javascript](https://www.javascript.com/)
 - [React](https://reactjs.org)
 
+## Instalação
+```bash
+# Clone do Repositorio
+$ git clone https://github.com/WesleyReboucas/RegistrationForm.git
+```
+
+### Web
+
+```bash
+# Na pasta RegistrationForm
+$ cd RegistrationForm
+
+# Instalação de depedencias
+$ yarn install
+
+# Iniciando aplicação
+$ yarn start
+```
+**Acesse:** http://localhost:3000/ 
+
+
 ## :bookmark_tabs: Certificados 
 <a href="https://cursos.alura.com.br/certificate/010c6926-3bd3-46bc-bebe-fac55704b859">
 	<img src="https://img.shields.io/static/v1?label=Alura&message=2021&color=199ffc&style=flat"/>
@@ -58,6 +80,7 @@ Assuntos abordados:
 <a href="https://cursos.alura.com.br/certificate/e9d11929-1a2b-4580-bc11-5aed8ab65949">
 	<img src="https://img.shields.io/static/v1?label=Alura&message=2021&color=199ffc&style=flat"/>
 </a>
+
 
 
 ## :page_with_curl: Licencia 
